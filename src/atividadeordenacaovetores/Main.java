@@ -18,8 +18,8 @@ Poste os resultados e os códigos fonte.
  */
 package atividadeordenacaovetores;
 
-import static atividadeordenacaovetores.Metodos.bubbleSort;
 import static atividadeordenacaovetores.Metodos.clonar;
+import static atividadeordenacaovetores.Metodos.bubbleSort;
 import static atividadeordenacaovetores.Metodos.heapSort;
 import static atividadeordenacaovetores.Metodos.insertionSort;
 import static atividadeordenacaovetores.Metodos.mergeSort;
@@ -27,7 +27,7 @@ import static atividadeordenacaovetores.Metodos.quickSort;
 import static atividadeordenacaovetores.Metodos.shellSort;
 import java.util.Random;
 
-public class Principal {
+public class Main {
 
     public static int[] vetor1;
     public static int[] vetor2;
@@ -638,7 +638,7 @@ public class Principal {
 // MÉTODO QUICK SORT         
         System.out.println("==========================================================");
         System.out.println("6. Ordenação de vetores com o método QUICK SORT: ");
-        System.out.println("-----------------------------------------------------------");        
+        System.out.println("----------------------------------------------------------");        
         System.out.println("Nº de elementos \t\tTempo (Milissegundos)");
         System.out.println("------------------------------------------------------");
     
