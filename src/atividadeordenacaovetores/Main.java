@@ -1,21 +1,3 @@
-/* Faça um programa que avalia os seguintes métodos de ordenação no sentido do tempo usado para ordenação.
-
-1 - Insertion sort
-2 - Bubble sort
-3 - Merge sort
-4 - Heapsort
-5 - Shell sort
-6 - Quick sort
-
-Para avaliação:
-- Crie e avalie vetores aleatórios com 1000, 5000, 10000 e 25000 elementos.
-- Crie e avalie vetores alimentados com valores em ordem crescente para o mesmo número de elementos do item anterior.
-- Crie e avalie vetores alimentados com valores em ordem decrescente para o mesmo número de elementos do item anterior.
-
-Apresente os resultados no formato de gráficos comparativos usando excel ou algo parecido.
-
-Poste os resultados e os códigos fonte.
- */
 package atividadeordenacaovetores;
 
 import static atividadeordenacaovetores.Metodos.clonar;
