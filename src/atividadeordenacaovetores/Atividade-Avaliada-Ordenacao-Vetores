@@ -1,0 +1,18 @@
+Atividade Avaliada - Comparativo entre alguns métodos de ordenação
+
+Compare os seguintes métodos de ordenação (conforme exercício anterior) no sentido de tempo de execução para os casos:
+- vetor aleatório para 1.000, 5.000, 10.000 e 30.000 elementos :
+- vetor já ordenado para 1.000, 5.000, 10.000 e 30.000 elementos :
+- vetor em ordem inversa para 1.000, 5.000, 10.000 e 30.000 elementos :
+
+Métodos: 
+- Bubble sort
+- Selection sort
+- Insertion sort
+- Merge sort
+- Heapsort
+- Counting sort
+- Quick sort
+
+* Use implementações prontas
+Crie uma tabela (excel) com os resultados encontrados, poste a tabela e sua implementação.

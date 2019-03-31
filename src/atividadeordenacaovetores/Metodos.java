@@ -1,9 +1,9 @@
 package atividadeordenacaovetores;
 
-import static atividadeordenacaovetores.Main.vetor1;
-import static atividadeordenacaovetores.Main.vetor2;
-import static atividadeordenacaovetores.Main.vetor3;
-import static atividadeordenacaovetores.Main.vetor4;
+import static atividadeordenacaovetores.MainTodosMetodos.vetor1;
+import static atividadeordenacaovetores.MainTodosMetodos.vetor2;
+import static atividadeordenacaovetores.MainTodosMetodos.vetor3;
+import static atividadeordenacaovetores.MainTodosMetodos.vetor4;
 
 /**
  *
@@ -18,16 +18,7 @@ public class Metodos {
         vetor4 = v4.clone();
     }
 
-    public static void insertionSort(int vetor[]) {
-        for (int i = 0; i < vetor.length; i++) {
-            int a = vetor[i];
-            for (int j = (i - 1); j >= 0 && vetor[j] > a; j--) {
-                vetor[j + 1] = vetor[j];
-                vetor[j] = a;
-            }
-        }
-    }
-
+    // Bubble Sort
     public static void bubbleSort(int vetor[]) {
         for (int i = 0; i < vetor.length; i++) {
             for (int j = 0; j < (vetor.length - 1); j++) {
@@ -40,6 +31,35 @@ public class Metodos {
         }
     }
 
+    // Selection Sort
+    public static void selectionSort(int[] vetor, int N) {
+        for (int fixo = 0; fixo < (N - 1); fixo++) {
+            int menor = fixo;
+            for (int i = menor + 1; i < N; i++) {
+                if (vetor[i] < vetor[menor]) {
+                    menor = i;
+                }
+            }
+            if (menor != fixo) {
+                int t = vetor[fixo];
+                vetor[fixo] = vetor[menor];
+                vetor[menor] = t;
+            }
+        }
+    }
+
+    // Insertion Sort
+    public static void insertionSort(int vetor[]) {
+        for (int i = 0; i < vetor.length; i++) {
+            int a = vetor[i];
+            for (int j = (i - 1); j >= 0 && vetor[j] > a; j--) {
+                vetor[j + 1] = vetor[j];
+                vetor[j] = a;
+            }
+        }
+    }
+
+    // Merge Sort
     public static void mergeSort(int vetor[], int inicio, int fim) {
         int meio;
         if (inicio < fim) {
@@ -79,6 +99,7 @@ public class Metodos {
         }
     }
 
+    // Heap Sort
     public static void heapSort(int vetor[]) {
         heap2(vetor);
         int n = vetor.length;
@@ -114,6 +135,7 @@ public class Metodos {
         v[aposJ] = aux;
     }
 
+    // Shell Sort
     public static void shellSort(int vetor[]) {
         int i, j, h = 1, ok;
         do {
@@ -133,6 +155,118 @@ public class Metodos {
         } while (h > 1);
     }
 
+    /*
+// Counting Sort 1
+    public static void countingSort(int v[]) {
+		
+	int maior = v[0];
+	for (int i = 1; i < v.length; i++) {
+		    if (v[i] > maior) {
+				maior = v[i];
+			}
+		}
+		
+// frequencia
+	int[] c = new int[maior];
+	for (int i = 0; i < v.length; i++) {
+			c[v[i] -1] += 1;
+		}
+		
+// cumulativa
+	for (int i = 1; i < maior; i++) {
+			c[i] += c[i-1];
+		}
+		
+	Integer[] b = new Integer[v.length];
+	for (int i = 0; i < b.length; i++) {
+			b[c[v[i] -1] -1] = v[i];
+			c[v[i] -1]--;
+		}
+		
+	for (int i = 0; i < b.length; i++) {
+			v[i] = b[i];
+		}
+	}
+    
+    
+     
+    // Counting Sort 2
+    public static void countingSort(int vetor[], int esquerda, int direita) {
+
+        //Encontrar o maior valor 
+        int k = 0;
+        for (int m = esquerda; m < direita; m++) {
+            if (vetor[m] > k) {
+                k = vetor[m];
+            }
+        }
+
+        //Cria vetor com o tamanho do maior elemento
+        int[] vetorTemporario = new int[k];
+
+        //Inicializar com zero o vetor temporario
+        for (int i = 0; i < vetorTemporario.length; i++) {
+            vetorTemporario[i] = 0;
+        }
+
+        //Contagem das ocorrencias no vetor desordenado
+        for (int j = esquerda; j < direita; j++) {
+            vetorTemporario[vetor[j]] += 1;
+        }
+
+        //Fazendo o  complemento do numero anterior 
+        for (int i = esquerda; i < k; i++) {
+            vetorTemporario[i] = vetorTemporario[i] + vetorTemporario[i - 1];
+        }
+
+        //Ordenando o vetor da direita para a esquerda
+        int[] vetorAuxiliar = new int[vetor.length];
+        for (int j = direita; j > esquerda; j--) {
+            vetorAuxiliar[vetorTemporario[vetor[j]]] = vetor[j];
+            vetorTemporario[vetor[j]] -= 1;
+        }
+
+        //Retornando os valores ordenados para o vetor de entrada
+        for (int i = esquerda; i < direita; i++) {
+            vetor[i] = vetorAuxiliar[i];
+        }
+    }
+
+     // Counting Sort 3
+    public static void countingSort(int[] vetor, int k) {
+        // create buckets 
+        int counter[] = new int[k + 1];
+        // fill buckets 
+        for (int i : vetor) {
+            counter[i]++;
+        }
+        // sort vetor 
+        int ndx = 0;
+        for (int i = 0; i < counter.length; i++) {
+            while (0 < counter[i]) {
+                vetor[ndx++] = i;
+                counter[i]--;
+            }
+        }
+    }
+ */   
+    // Counting Sorte
+    public static void countingSort(int[] vetor, int min, int max){
+	int[] count= new int[max - min + 1];
+	for(int number : vetor){
+		count[number - min]++;
+	}
+	int z= 0;
+	for(int i= min;i <= max;i++){
+		while(count[i - min] > 0){
+			vetor[z]= i;
+			z++;
+			count[i - min]--;
+		}
+	}
+}
+
+    // Quick Sort
     public static void quickSort(int v[], int esquerda, int direita) {
         int esq = esquerda;
         int dir = direita;
