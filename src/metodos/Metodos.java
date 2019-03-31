@@ -1,9 +1,9 @@
-package ordenacaovetores;
+package metodos;
 
-import static ordenacaovetores.MainTodosMetodos.vetor1;
-import static ordenacaovetores.MainTodosMetodos.vetor2;
-import static ordenacaovetores.MainTodosMetodos.vetor3;
-import static ordenacaovetores.MainTodosMetodos.vetor4;
+import static metodos.MainTodosMetodos.vetor1;
+import static metodos.MainTodosMetodos.vetor2;
+import static metodos.MainTodosMetodos.vetor3;
+import static metodos.MainTodosMetodos.vetor4;
 
 /**
  *

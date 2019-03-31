@@ -1,10 +1,10 @@
-package ordenacaovetores.main;
+package main;
 
-import static ordenacaovetores.Metodos.clonar;
-import static ordenacaovetores.Metodos.heapSort;
+import static metodos.Metodos.clonar;
+import static metodos.Metodos.insertionSort;
 import java.util.Random;
 
-public class HeapSortMain {
+public class InsertionSortMain {
 
     public static int[] vetor1;
     public static int[] vetor2;
@@ -76,112 +76,110 @@ public class HeapSortMain {
         long tempo;
 
 // Início da aplicação dos métodos
-// 5. MÉTODO HEAP SORT         
-        System.out.println("==========================================================");
-        System.out.println("5. Ordenação com HEAP SORT: ");
+// 3. MÉTODO INSERTION SORT         
+        System.out.println("===========================================================");
+        System.out.println("3. Ordenação com INSERTION SORT:");
         System.out.println("-----------------------------------------------------------");
         System.out.println("Nº de elementos \t\tTempo (Milissegundos)");
         System.out.println("------------------------------------------------------");
 
         // Valores aleatórios
-        System.out.println("Valores aleatórios (Heap Sort): ");
+        System.out.println("Valores aleatórios (Insertion Sort): ");
         clonar(vetor1Random, vetor2Random, vetor3Random, vetor4Random);
 
         // n1 = 1.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        heapSort(vetor1);
+        insertionSort(vetor1);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
-        // n2 = 5.000 valores aleatórios
+        // n1 = 5.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        heapSort(vetor2);
+        insertionSort(vetor2);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
         // n3 = 10.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        heapSort(vetor3);
+        insertionSort(vetor3);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
         // n4 = 25.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        heapSort(vetor4);
+        insertionSort(vetor4);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
 
-        // Valores crescentes 
+        // Valores crescentes
         System.out.println("----------------------------------------");
-        System.out.println("Valores crescentes (Heap Sort): ");
+        System.out.println("Valores crescentes (Insertion Sort): ");
         clonar(vetor1Crescente, vetor2Crescente, vetor3Crescente, vetor4Crescente);
 
-        // n1 = 1.000 valores ordem decrescente
+        // n1 = 1.000 valores crescentes
         inicio = System.currentTimeMillis();
-        heapSort(vetor1);
+        insertionSort(vetor1);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
-        // n2 = 5.000 valores em ordem crescente
+        // n2 = 5.000 valores crescentes
         inicio = System.currentTimeMillis();
-        heapSort(vetor2);
+        insertionSort(vetor2);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
-        // n3 = 10.000 valores em ordem crescente
+        // n3 = 10.000 valores crescentes
         inicio = System.currentTimeMillis();
-        heapSort(vetor3);
+        insertionSort(vetor3);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
-        // n4 = 25.000 valores em ordem crescente
+        // n4 = 25.000 valores crescentes
         inicio = System.currentTimeMillis();
-        heapSort(vetor4);
+        insertionSort(vetor4);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
-        System.out.print("");
 
-        // Valores decrescentes 
+        // Valores decrescentes
         System.out.println("----------------------------------------");
-        System.out.println("Valores decrescentes (Heap Sort): ");
+        System.out.println("Valores decrescentes (Insertion Sort): ");
         clonar(vetor1Decrescente, vetor2Decrescente, vetor3Decrescente, vetor4Decrescente);
 
-        // n1 = 1.000 valores ordem decrescente        
+        // n1 = 1.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        heapSort(vetor1);
+        insertionSort(vetor1);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
-        // n2 = 5.000 valores ordem decrescente
+        // n2 = 5.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        heapSort(vetor2);
+        insertionSort(vetor2);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
-        // n3 = 10.000 valores ordem decrescente
+        // n3 = 10.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        heapSort(vetor3);
+        insertionSort(vetor3);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
-        // n4 = 25.000 valores ordem decrescente
+        // n4 = 25.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        heapSort(vetor4);
+        insertionSort(vetor4);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
-
         System.out.println("");
 
     }

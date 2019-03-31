@@ -1,7 +1,7 @@
 package main;
 
-import static ordenacaovetores.Metodos.clonar;
-import static ordenacaovetores.Metodos.insertionSort;
+import static metodos.Metodos.clonar;
+import static metodos.Metodos.insertionSort;
 import java.util.Random;
 
 public class InsertionSortMain {

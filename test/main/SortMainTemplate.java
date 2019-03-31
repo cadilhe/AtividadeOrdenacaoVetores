@@ -1,10 +1,11 @@
-package ordenacaovetores.main;
+package main;
 
-import static ordenacaovetores.Metodos.clonar;
-import static ordenacaovetores.Metodos.countingSort;
+import static metodos.Metodos.clonar;
+import static metodos.Metodos.bubbleSort;
 import java.util.Random;
+import static main.FireUp.fireup;
 
-public class CountingSortMain {
+public class SortMainTemplate {
 
     public static int[] vetor1;
     public static int[] vetor2;
@@ -13,7 +14,8 @@ public class CountingSortMain {
 
     public static void main(String[] args) {
         // Tamanhos n(x) para cada vetor(x)
-        int n1 = 1000; // tamanho vetor1
+        
+       int n1 = 1000; // tamanho vetor1
         int n2 = 5000; // tamanho vetor2
         int n3 = 10000;// tamanho vetor3
         int n4 = 30000;// ramanho vetor4
@@ -69,6 +71,7 @@ public class CountingSortMain {
             vetor4Crescente[i] = i + 1;
             vetor4Decrescente[i] = j;
         }
+    
 
         // Declarando variáveis para medir o tempo de execução        
         long inicio;
@@ -76,110 +79,111 @@ public class CountingSortMain {
         long tempo;
 
 // Início da aplicação dos métodos
-//6. MÉTODO COUNTING SORT         
+// 1. MÉTODO BUBBLE SORT         
         System.out.println("===========================================================");
-        System.out.println("6. Ordenação com COUNTING SORT: ");
+        System.out.println("1. Ordenação com BUBBLE SORT: ");
         System.out.println("-----------------------------------------------------------");
         System.out.println("Nº de elementos \t\tTempo (Milissegundos)");
         System.out.println("------------------------------------------------------");
 
-        // Valores aleatórios 
-        System.out.println("Valores aleatórios (Counting Sort): ");
+        // Valores aleatórios
+        System.out.println("Valores aleatórios (Buble Sort): ");
         clonar(vetor1Random, vetor2Random, vetor3Random, vetor4Random);
 
         // n1 = 1.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        countingSort(vetor1, 0, (vetor1.length - 1));
+        bubbleSort(vetor1);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
         // n1 = 5.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        countingSort(vetor2, 0, (vetor2.length - 1));
+        bubbleSort(vetor2);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
         // n3 = 10.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        countingSort(vetor3, 0, (vetor3.length - 1));
+        bubbleSort(vetor3);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
         // n4 = 25.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        countingSort(vetor4, 0, (vetor4.length - 1));
+        bubbleSort(vetor4);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
 
-        // Valores em ordem crescente 
+        // Valores em ordem crescente
         System.out.println("----------------------------------------");
-        System.out.println("Valores crescentes (Counting Sort): ");
+        System.out.println("Valores crescentes (Bubble Sort):");
         clonar(vetor1Crescente, vetor2Crescente, vetor3Crescente, vetor4Crescente);
 
-        // n1 = 1.000 valores em ordem crescente
+        // n1 = 1.000 valores crescentes
         inicio = System.currentTimeMillis();
-        countingSort(vetor1, 0, (vetor1.length - 1));
+        bubbleSort(vetor1);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
-        // n2 = 5.000 valores em ordem crescente
+        // n2 = 5.000 valores crescentes
         inicio = System.currentTimeMillis();
-        countingSort(vetor2, 0, (vetor2.length - 1));
+        bubbleSort(vetor2);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
-        // n3 = 10.000 valores em ordem crescente
+        // n3 = 10.000 valores crescentes
         inicio = System.currentTimeMillis();
-        countingSort(vetor3, 0, (vetor3.length - 1));
+        bubbleSort(vetor3);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
-        // n4 = 25.000 valores em ordem crescente
+        // n4 = 25.000 valores crescentes
         inicio = System.currentTimeMillis();
-        countingSort(vetor4, 0, (vetor4.length - 1));
+        bubbleSort(vetor4);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
 
-        // Valores em ordem decrescente 
+        // Valores em ordem decrescente
         System.out.println("----------------------------------------");
-        System.out.println("Valores decrescentes (Counting Sort): ");
+        System.out.println("Valores decrescentes (Bubble Sort):");
         clonar(vetor1Decrescente, vetor2Decrescente, vetor3Decrescente, vetor4Decrescente);
 
-        // n1 = 1.000 valores em ordem decrescente
+        // n1 = 1.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        countingSort(vetor1, 0, (vetor1.length - 1));
+        bubbleSort(vetor1);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
-        // n2 = 5.000 valores em ordem decrescente
+        // n2 = 5.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        countingSort(vetor2, 0, (vetor2.length - 1));
+        bubbleSort(vetor2);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
-        // n3 = 10.000 valores em ordem decrescente
+        // n3 = 10.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        countingSort(vetor3, 0, (vetor3.length - 1));
+        bubbleSort(vetor3);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
-        // n4 = 25.000 valores em ordem decrescente
+        // n4 = 25.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        countingSort(vetor4, 0, (vetor4.length - 1));
+        bubbleSort(vetor4);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
+
         System.out.println("");
     }
 }

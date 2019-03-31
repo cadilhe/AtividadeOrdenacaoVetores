@@ -1,17 +1,17 @@
-package ordenacaovetores;
+package metodos;
 
 /*
 * Este arquivo main invova todos os métiodos de ordenação de forma linear.
 */
 
-import static ordenacaovetores.Metodos.clonar;
-import static ordenacaovetores.Metodos.bubbleSort;
-import static ordenacaovetores.Metodos.countingSort;
-import static ordenacaovetores.Metodos.heapSort;
-import static ordenacaovetores.Metodos.insertionSort;
-import static ordenacaovetores.Metodos.mergeSort;
-import static ordenacaovetores.Metodos.quickSort;
-import static ordenacaovetores.Metodos.selectionSort;
+import static metodos.Metodos.clonar;
+import static metodos.Metodos.bubbleSort;
+import static metodos.Metodos.countingSort;
+import static metodos.Metodos.heapSort;
+import static metodos.Metodos.insertionSort;
+import static metodos.Metodos.mergeSort;
+import static metodos.Metodos.quickSort;
+import static metodos.Metodos.selectionSort;
 import java.util.Random;
 
 public class MainTodosMetodos {

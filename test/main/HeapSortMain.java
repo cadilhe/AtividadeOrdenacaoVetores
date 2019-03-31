@@ -1,7 +1,7 @@
 package main;
 
-import static ordenacaovetores.Metodos.clonar;
-import static ordenacaovetores.Metodos.heapSort;
+import static metodos.Metodos.clonar;
+import static metodos.Metodos.heapSort;
 import java.util.Random;
 
 public class HeapSortMain {

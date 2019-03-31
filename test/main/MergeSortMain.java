@@ -1,7 +1,7 @@
 package main;
 
-import static ordenacaovetores.Metodos.clonar;
-import static ordenacaovetores.Metodos.mergeSort;
+import static metodos.Metodos.clonar;
+import static metodos.Metodos.mergeSort;
 import java.util.Random;
 
 public class MergeSortMain {

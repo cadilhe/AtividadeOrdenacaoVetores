@@ -1,7 +1,7 @@
-package ordenacaovetores.main;
+package main;
 
-import static ordenacaovetores.Metodos.clonar;
-import static ordenacaovetores.Metodos.quickSort;
+import static metodos.Metodos.clonar;
+import static metodos.Metodos.quickSort;
 import java.util.Random;
 
 public class QuickSortMain {
