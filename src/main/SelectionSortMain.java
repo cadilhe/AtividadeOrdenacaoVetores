@@ -78,7 +78,7 @@ public class SelectionSortMain {
 // Início da aplicação dos métodos
         // 2. MÉTODO SELECTION SORT         
         System.out.println("===========================================================");
-        System.out.println("2. Ordenação com SELECTION:");
+        System.out.println("2. Ordenação com SELECTION SORT:");
         System.out.println("-----------------------------------------------------------");
         System.out.println("Nº de elementos \t\tTempo (Milissegundos)");
         System.out.println("------------------------------------------------------");
