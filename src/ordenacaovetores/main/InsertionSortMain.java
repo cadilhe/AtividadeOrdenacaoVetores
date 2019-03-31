@@ -1,10 +1,10 @@
-package atividadeordenacaovetores;
+package ordenacaovetores.main;
 
-import static atividadeordenacaovetores.Metodos.clonar;
-import static atividadeordenacaovetores.Metodos.countingSort;
+import static ordenacaovetores.Metodos.clonar;
+import static ordenacaovetores.Metodos.insertionSort;
 import java.util.Random;
 
-public class CountingSortMain {
+public class InsertionSortMain {
 
     public static int[] vetor1;
     public static int[] vetor2;
@@ -76,110 +76,111 @@ public class CountingSortMain {
         long tempo;
 
 // Início da aplicação dos métodos
-//6. MÉTODO COUNTING SORT         
+// 3. MÉTODO INSERTION SORT         
         System.out.println("===========================================================");
-        System.out.println("6. Ordenação com COUNTING SORT: ");
+        System.out.println("3. Ordenação com INSERTION SORT:");
         System.out.println("-----------------------------------------------------------");
         System.out.println("Nº de elementos \t\tTempo (Milissegundos)");
         System.out.println("------------------------------------------------------");
 
-        // Valores aleatórios 
-        System.out.println("Valores aleatórios (Counting Sort): ");
+        // Valores aleatórios
+        System.out.println("Valores aleatórios (Insertion Sort): ");
         clonar(vetor1Random, vetor2Random, vetor3Random, vetor4Random);
 
         // n1 = 1.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        countingSort(vetor1, 0, (vetor1.length - 1));
+        insertionSort(vetor1);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
         // n1 = 5.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        countingSort(vetor2, 0, (vetor2.length - 1));
+        insertionSort(vetor2);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
         // n3 = 10.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        countingSort(vetor3, 0, (vetor3.length - 1));
+        insertionSort(vetor3);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
         // n4 = 25.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        countingSort(vetor4, 0, (vetor4.length - 1));
+        insertionSort(vetor4);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
 
-        // Valores em ordem crescente 
+        // Valores crescentes
         System.out.println("----------------------------------------");
-        System.out.println("Valores crescentes (Counting Sort): ");
+        System.out.println("Valores crescentes (Insertion Sort): ");
         clonar(vetor1Crescente, vetor2Crescente, vetor3Crescente, vetor4Crescente);
 
-        // n1 = 1.000 valores em ordem crescente
+        // n1 = 1.000 valores crescentes
         inicio = System.currentTimeMillis();
-        countingSort(vetor1, 0, (vetor1.length - 1));
+        insertionSort(vetor1);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
-        // n2 = 5.000 valores em ordem crescente
+        // n2 = 5.000 valores crescentes
         inicio = System.currentTimeMillis();
-        countingSort(vetor2, 0, (vetor2.length - 1));
+        insertionSort(vetor2);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
-        // n3 = 10.000 valores em ordem crescente
+        // n3 = 10.000 valores crescentes
         inicio = System.currentTimeMillis();
-        countingSort(vetor3, 0, (vetor3.length - 1));
+        insertionSort(vetor3);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
-        // n4 = 25.000 valores em ordem crescente
+        // n4 = 25.000 valores crescentes
         inicio = System.currentTimeMillis();
-        countingSort(vetor4, 0, (vetor4.length - 1));
+        insertionSort(vetor4);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
 
-        // Valores em ordem decrescente 
+        // Valores decrescentes
         System.out.println("----------------------------------------");
-        System.out.println("Valores decrescentes (Counting Sort): ");
+        System.out.println("Valores decrescentes (Insertion Sort): ");
         clonar(vetor1Decrescente, vetor2Decrescente, vetor3Decrescente, vetor4Decrescente);
 
-        // n1 = 1.000 valores em ordem decrescente
+        // n1 = 1.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        countingSort(vetor1, 0, (vetor1.length - 1));
+        insertionSort(vetor1);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
-        // n2 = 5.000 valores em ordem decrescente
+        // n2 = 5.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        countingSort(vetor2, 0, (vetor2.length - 1));
+        insertionSort(vetor2);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
-        // n3 = 10.000 valores em ordem decrescente
+        // n3 = 10.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        countingSort(vetor3, 0, (vetor3.length - 1));
+        insertionSort(vetor3);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
-        // n4 = 25.000 valores em ordem decrescente
+        // n4 = 25.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        countingSort(vetor4, 0, (vetor4.length - 1));
+        insertionSort(vetor4);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
         System.out.println("");
+
     }
 }

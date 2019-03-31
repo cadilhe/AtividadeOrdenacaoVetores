@@ -1,10 +1,10 @@
-package atividadeordenacaovetores;
+package ordenacaovetores.main;
 
-import static atividadeordenacaovetores.Metodos.clonar;
-import static atividadeordenacaovetores.Metodos.insertionSort;
+import static ordenacaovetores.Metodos.clonar;
+import static ordenacaovetores.Metodos.mergeSort;
 import java.util.Random;
 
-public class InsertionSortMain {
+public class MergeSortMain {
 
     public static int[] vetor1;
     public static int[] vetor2;
@@ -76,111 +76,111 @@ public class InsertionSortMain {
         long tempo;
 
 // Início da aplicação dos métodos
-// 3. MÉTODO INSERTION SORT         
+// 4. MÉTODO MERGE SORT         
         System.out.println("===========================================================");
-        System.out.println("3. Ordenação com INSERTION SORT:");
+        System.out.println("4. Ordenação com MERGE SORT: ");
         System.out.println("-----------------------------------------------------------");
         System.out.println("Nº de elementos \t\tTempo (Milissegundos)");
         System.out.println("------------------------------------------------------");
 
-        // Valores aleatórios
-        System.out.println("Valores aleatórios (Insertion Sort): ");
+        // Valores aleatórios 
+        System.out.println("----------------------------------------");
+        System.out.println("Valores aleatórios (Merge Sort): ");
         clonar(vetor1Random, vetor2Random, vetor3Random, vetor4Random);
 
-        // n1 = 1.000 valores aleatórios
+        // n1 =1.000 valores aleatórios  
         inicio = System.currentTimeMillis();
-        insertionSort(vetor1);
+        mergeSort(vetor1, 0, (vetor1.length - 1));
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
-        // n1 = 5.000 valores aleatórios
+        // n2 = 5.000 valores aleatórios 
         inicio = System.currentTimeMillis();
-        insertionSort(vetor2);
+        mergeSort(vetor2, 0, (vetor2.length - 1));
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
-        // n3 = 10.000 valores aleatórios
+        // n3 = 10.000 valores aleatórios 
         inicio = System.currentTimeMillis();
-        insertionSort(vetor3);
+        mergeSort(vetor3, 0, (vetor3.length - 1));
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
-        // n4 = 25.000 valores aleatórios
+        // n4 = 25.000 valores aleatórios 
         inicio = System.currentTimeMillis();
-        insertionSort(vetor4);
+        mergeSort(vetor4, 0, (vetor4.length - 1));
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
 
-        // Valores crescentes
+        // Valores em ordem crescente
         System.out.println("----------------------------------------");
-        System.out.println("Valores crescentes (Insertion Sort): ");
+        System.out.println("Valores crescentes (Merge Sort):");
         clonar(vetor1Crescente, vetor2Crescente, vetor3Crescente, vetor4Crescente);
 
-        // n1 = 1.000 valores crescentes
+        // n1 = 1.000 valores em ordem crescente 
         inicio = System.currentTimeMillis();
-        insertionSort(vetor1);
+        mergeSort(vetor1, 0, (vetor1.length - 1));
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
-        // n2 = 5.000 valores crescentes
+        // n2 = 5.000 valores em ordem crescente 
         inicio = System.currentTimeMillis();
-        insertionSort(vetor2);
+        mergeSort(vetor2, 0, (vetor2.length - 1));
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
-        // n3 = 10.000 valores crescentes
+        // n3 = 10.000 valores em ordem crescente 
         inicio = System.currentTimeMillis();
-        insertionSort(vetor3);
+        mergeSort(vetor3, 0, (vetor3.length - 1));
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
-        // n4 = 25.000 valores crescentes
+        // n4 = 25.000 valores em ordem crescente 
         inicio = System.currentTimeMillis();
-        insertionSort(vetor4);
+        mergeSort(vetor4, 0, (vetor4.length - 1));
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
 
-        // Valores decrescentes
+        // Valores em ordem decrescente
         System.out.println("----------------------------------------");
-        System.out.println("Valores decrescentes (Insertion Sort): ");
+        System.out.println("Valores decrescentes (Merge Sort):");
         clonar(vetor1Decrescente, vetor2Decrescente, vetor3Decrescente, vetor4Decrescente);
 
-        // n1 = 1.000 valores decrescentes
+        // n1 = 1.000 valores em ordem decrescente
         inicio = System.currentTimeMillis();
-        insertionSort(vetor1);
+        mergeSort(vetor1, 0, (vetor1.length - 1));
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
-        // n2 = 5.000 valores decrescentes
+        // n2 = 5.000 valores em ordem decrescente
         inicio = System.currentTimeMillis();
-        insertionSort(vetor2);
+        mergeSort(vetor2, 0, (vetor2.length - 1));
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
-        // n3 = 10.000 valores decrescentes
+        // n3 = 10.000 valores em ordem decrescente
         inicio = System.currentTimeMillis();
-        insertionSort(vetor3);
+        mergeSort(vetor3, 0, (vetor3.length - 1));
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
-        // n4 = 25.000 valores decrescentes
+        // n4 = 25.000 valores em ordem decrescente
         inicio = System.currentTimeMillis();
-        insertionSort(vetor4);
+        mergeSort(vetor4, 0, (vetor4.length - 1));
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
         System.out.println("");
-
     }
 }

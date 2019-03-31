@@ -1,10 +1,10 @@
-package atividadeordenacaovetores;
+package main;
 
-import static atividadeordenacaovetores.Metodos.clonar;
-import static atividadeordenacaovetores.Metodos.bubbleSort;
+import static ordenacaovetores.Metodos.clonar;
+import static ordenacaovetores.Metodos.insertionSort;
 import java.util.Random;
 
-public class BubbleSortMain {
+public class InsertionSortMain {
 
     public static int[] vetor1;
     public static int[] vetor2;
@@ -76,111 +76,111 @@ public class BubbleSortMain {
         long tempo;
 
 // Início da aplicação dos métodos
-// 1. MÉTODO BUBBLE SORT         
+// 3. MÉTODO INSERTION SORT         
         System.out.println("===========================================================");
-        System.out.println("1. Ordenação com BUBBLE SORT: ");
+        System.out.println("3. Ordenação com INSERTION SORT:");
         System.out.println("-----------------------------------------------------------");
         System.out.println("Nº de elementos \t\tTempo (Milissegundos)");
         System.out.println("------------------------------------------------------");
 
         // Valores aleatórios
-        System.out.println("Valores aleatórios (Buble Sort): ");
+        System.out.println("Valores aleatórios (Insertion Sort): ");
         clonar(vetor1Random, vetor2Random, vetor3Random, vetor4Random);
 
         // n1 = 1.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        bubbleSort(vetor1);
+        insertionSort(vetor1);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
         // n1 = 5.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        bubbleSort(vetor2);
+        insertionSort(vetor2);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
         // n3 = 10.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        bubbleSort(vetor3);
+        insertionSort(vetor3);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
         // n4 = 25.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        bubbleSort(vetor4);
+        insertionSort(vetor4);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
 
-        // Valores em ordem crescente
+        // Valores crescentes
         System.out.println("----------------------------------------");
-        System.out.println("Valores crescentes (Bubble Sort):");
+        System.out.println("Valores crescentes (Insertion Sort): ");
         clonar(vetor1Crescente, vetor2Crescente, vetor3Crescente, vetor4Crescente);
 
         // n1 = 1.000 valores crescentes
         inicio = System.currentTimeMillis();
-        bubbleSort(vetor1);
+        insertionSort(vetor1);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
         // n2 = 5.000 valores crescentes
         inicio = System.currentTimeMillis();
-        bubbleSort(vetor2);
+        insertionSort(vetor2);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
         // n3 = 10.000 valores crescentes
         inicio = System.currentTimeMillis();
-        bubbleSort(vetor3);
+        insertionSort(vetor3);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
         // n4 = 25.000 valores crescentes
         inicio = System.currentTimeMillis();
-        bubbleSort(vetor4);
+        insertionSort(vetor4);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
 
-        // Valores em ordem decrescente
+        // Valores decrescentes
         System.out.println("----------------------------------------");
-        System.out.println("Valores decrescentes (Bubble Sort):");
+        System.out.println("Valores decrescentes (Insertion Sort): ");
         clonar(vetor1Decrescente, vetor2Decrescente, vetor3Decrescente, vetor4Decrescente);
 
         // n1 = 1.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        bubbleSort(vetor1);
+        insertionSort(vetor1);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
         // n2 = 5.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        bubbleSort(vetor2);
+        insertionSort(vetor2);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
         // n3 = 10.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        bubbleSort(vetor3);
+        insertionSort(vetor3);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
         // n4 = 25.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        bubbleSort(vetor4);
+        insertionSort(vetor4);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
-
         System.out.println("");
+
     }
 }

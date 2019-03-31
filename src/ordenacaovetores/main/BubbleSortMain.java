@@ -1,10 +1,10 @@
-package atividadeordenacaovetores;
+package ordenacaovetores.main;
 
-import static atividadeordenacaovetores.Metodos.clonar;
-import static atividadeordenacaovetores.Metodos.heapSort;
+import static ordenacaovetores.Metodos.clonar;
+import static ordenacaovetores.Metodos.bubbleSort;
 import java.util.Random;
 
-public class HeapSortMain {
+public class BubbleSortMain {
 
     public static int[] vetor1;
     public static int[] vetor2;
@@ -76,113 +76,111 @@ public class HeapSortMain {
         long tempo;
 
 // Início da aplicação dos métodos
-// 5. MÉTODO HEAP SORT         
-        System.out.println("==========================================================");
-        System.out.println("5. Ordenação com HEAP SORT: ");
+// 1. MÉTODO BUBBLE SORT         
+        System.out.println("===========================================================");
+        System.out.println("1. Ordenação com BUBBLE SORT: ");
         System.out.println("-----------------------------------------------------------");
         System.out.println("Nº de elementos \t\tTempo (Milissegundos)");
         System.out.println("------------------------------------------------------");
 
         // Valores aleatórios
-        System.out.println("Valores aleatórios (Heap Sort): ");
+        System.out.println("Valores aleatórios (Buble Sort): ");
         clonar(vetor1Random, vetor2Random, vetor3Random, vetor4Random);
 
         // n1 = 1.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        heapSort(vetor1);
+        bubbleSort(vetor1);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
-        // n2 = 5.000 valores aleatórios
+        // n1 = 5.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        heapSort(vetor2);
+        bubbleSort(vetor2);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
         // n3 = 10.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        heapSort(vetor3);
+        bubbleSort(vetor3);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
         // n4 = 25.000 valores aleatórios
         inicio = System.currentTimeMillis();
-        heapSort(vetor4);
+        bubbleSort(vetor4);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
 
-        // Valores crescentes 
+        // Valores em ordem crescente
         System.out.println("----------------------------------------");
-        System.out.println("Valores crescentes (Heap Sort): ");
+        System.out.println("Valores crescentes (Bubble Sort):");
         clonar(vetor1Crescente, vetor2Crescente, vetor3Crescente, vetor4Crescente);
 
-        // n1 = 1.000 valores ordem decrescente
+        // n1 = 1.000 valores crescentes
         inicio = System.currentTimeMillis();
-        heapSort(vetor1);
+        bubbleSort(vetor1);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
-        // n2 = 5.000 valores em ordem crescente
+        // n2 = 5.000 valores crescentes
         inicio = System.currentTimeMillis();
-        heapSort(vetor2);
+        bubbleSort(vetor2);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
-        // n3 = 10.000 valores em ordem crescente
+        // n3 = 10.000 valores crescentes
         inicio = System.currentTimeMillis();
-        heapSort(vetor3);
+        bubbleSort(vetor3);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
-        // n4 = 25.000 valores em ordem crescente
+        // n4 = 25.000 valores crescentes
         inicio = System.currentTimeMillis();
-        heapSort(vetor4);
+        bubbleSort(vetor4);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
-        System.out.print("");
 
-        // Valores decrescentes 
+        // Valores em ordem decrescente
         System.out.println("----------------------------------------");
-        System.out.println("Valores decrescentes (Heap Sort): ");
+        System.out.println("Valores decrescentes (Bubble Sort):");
         clonar(vetor1Decrescente, vetor2Decrescente, vetor3Decrescente, vetor4Decrescente);
 
-        // n1 = 1.000 valores ordem decrescente        
+        // n1 = 1.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        heapSort(vetor1);
+        bubbleSort(vetor1);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n1 + " \t\t\t\t" + tempo);
 
-        // n2 = 5.000 valores ordem decrescente
+        // n2 = 5.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        heapSort(vetor2);
+        bubbleSort(vetor2);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n2 + " \t\t\t\t" + tempo);
 
-        // n3 = 10.000 valores ordem decrescente
+        // n3 = 10.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        heapSort(vetor3);
+        bubbleSort(vetor3);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n3 + " \t\t\t\t" + tempo);
 
-        // n4 = 25.000 valores ordem decrescente
+        // n4 = 25.000 valores decrescentes
         inicio = System.currentTimeMillis();
-        heapSort(vetor4);
+        bubbleSort(vetor4);
         fim = System.currentTimeMillis();
         tempo = fim - inicio;
         System.out.println(n4 + " \t\t\t\t" + tempo);
 
         System.out.println("");
-
     }
 }
