@@ -78,7 +78,7 @@ public class HeapSortMain {
 // Início da aplicação dos métodos
 // 5. MÉTODO HEAP SORT         
         System.out.println("==========================================================");
-        System.out.println("5. Ordenação com HEAP SORT: ");
+        System.out.println("Ordenação com HEAP SORT: ");
         System.out.println("-----------------------------------------------------------");
         System.out.println("Nº de elementos \t\tTempo (Milissegundos)");
         System.out.println("------------------------------------------------------");

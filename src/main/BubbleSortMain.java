@@ -78,7 +78,7 @@ public class BubbleSortMain {
 // Início da aplicação dos métodos
 // 1. MÉTODO BUBBLE SORT         
         System.out.println("===========================================================");
-        System.out.println("1. Ordenação com BUBBLE SORT: ");
+        System.out.println("Ordenação com BUBBLE SORT: ");
         System.out.println("-----------------------------------------------------------");
         System.out.println("Nº de elementos \t\tTempo (Milissegundos)");
         System.out.println("------------------------------------------------------");

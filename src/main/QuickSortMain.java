@@ -78,7 +78,7 @@ public class QuickSortMain {
 // Início da aplicação dos métodos
 // 7. MÉTODO QUICK SORT         
         System.out.println("==========================================================");
-        System.out.println("7. Ordenação com QUICK SORT: ");
+        System.out.println("Ordenação com QUICK SORT: ");
         System.out.println("----------------------------------------------------------");
         System.out.println("Nº de elementos \t\tTempo (Milissegundos)");
         System.out.println("------------------------------------------------------");

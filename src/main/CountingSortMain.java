@@ -78,7 +78,7 @@ public class CountingSortMain {
 // Início da aplicação dos métodos
 //6. MÉTODO COUNTING SORT         
         System.out.println("===========================================================");
-        System.out.println("6. Ordenação com COUNTING SORT: ");
+        System.out.println("Ordenação com COUNTING SORT: ");
         System.out.println("-----------------------------------------------------------");
         System.out.println("Nº de elementos \t\tTempo (Milissegundos)");
         System.out.println("------------------------------------------------------");

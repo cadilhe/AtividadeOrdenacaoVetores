@@ -78,7 +78,7 @@ public class InsertionSortMain {
 // Início da aplicação dos métodos
 // 3. MÉTODO INSERTION SORT         
         System.out.println("===========================================================");
-        System.out.println("3. Ordenação com INSERTION SORT:");
+        System.out.println("Ordenação com INSERTION SORT:");
         System.out.println("-----------------------------------------------------------");
         System.out.println("Nº de elementos \t\tTempo (Milissegundos)");
         System.out.println("------------------------------------------------------");

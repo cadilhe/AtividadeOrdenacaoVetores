@@ -78,7 +78,7 @@ public class MergeSortMain {
 // Início da aplicação dos métodos
 // 4. MÉTODO MERGE SORT         
         System.out.println("===========================================================");
-        System.out.println("4. Ordenação com MERGE SORT: ");
+        System.out.println("Ordenação com MERGE SORT: ");
         System.out.println("-----------------------------------------------------------");
         System.out.println("Nº de elementos \t\tTempo (Milissegundos)");
         System.out.println("------------------------------------------------------");
